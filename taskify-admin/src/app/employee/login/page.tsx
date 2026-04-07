@@ -9,7 +9,7 @@ type UserItem = {
   name: string;
 };
 
-const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL ?? "http://localhost:4000";
+const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL ?? "https://project-management-qb7z.onrender.com";
 
 export default function UserLoginPage() {
   const router = useRouter();

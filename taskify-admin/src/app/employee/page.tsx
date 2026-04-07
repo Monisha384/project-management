@@ -28,7 +28,7 @@ type PageProps = {
 };
 
 export default async function EmployeePage({ searchParams }: PageProps) {
-  const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL ?? "http://localhost:4000";
+  const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL ?? "https://project-management-qb7z.onrender.com";
   const [usersResponse, projectsResponse] = await Promise.all([
     fetch(`${backendUrl}/api/users`, { cache: "no-store" }),
     fetch(`${backendUrl}/api/projects`, { cache: "no-store" }),
