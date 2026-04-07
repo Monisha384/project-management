@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+backend/venv/
+backend/__pycache__/
+taskify-admin/.next/
+taskify-admin/out/
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+backend/.env
+taskify-admin/.env
+
+# Miscellaneous
+.DS_Store
+*.log

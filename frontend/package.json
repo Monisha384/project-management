@@ -1,0 +1,10 @@
+{
+  "name": "project-management-frontend",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix ../taskify-admin run dev",
+    "build": "npm --prefix ../taskify-admin run build",
+    "start": "npm --prefix ../taskify-admin run start",
+    "lint": "npm --prefix ../taskify-admin run lint"
+  }
+}

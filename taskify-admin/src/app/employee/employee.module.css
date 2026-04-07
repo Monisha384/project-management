@@ -1,0 +1,142 @@
+.page {
+  min-height: 100vh;
+  background: radial-gradient(circle at top right, #edf4ff 0%, #f4f6fb 58%, #f7f9fe 100%);
+  padding: 28px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header p {
+  color: #637086;
+}
+
+.header a {
+  color: #3046c9;
+  font-weight: 700;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid #e6ecf7;
+  box-shadow: 0 12px 28px rgba(32, 55, 119, 0.06);
+  padding: 18px;
+}
+
+.card ul {
+  margin-top: 10px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card li {
+  border: 1px solid #edf1fa;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: #fbfdff;
+}
+
+.card span {
+  color: #637086;
+  font-size: 13px;
+}
+
+.progressTrack {
+  margin-top: 10px;
+  background: #edf1fa;
+  height: 10px;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progressFill {
+  width: 68%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-color) 0%, #22c55e 100%);
+}
+
+.card small {
+  display: block;
+  margin-top: 8px;
+  color: #637086;
+}
+
+.card table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.card th,
+.card td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #edf1fa;
+  font-size: 14px;
+}
+
+.userListSection {
+  margin-top: 18px;
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid #e6ecf7;
+  box-shadow: 0 12px 28px rgba(32, 55, 119, 0.06);
+  padding: 18px;
+}
+
+.userList {
+  list-style: none;
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.userList li {
+  border: 1px solid #edf1fa;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  background: #fbfdff;
+}
+
+.userList li div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.userList li span {
+  color: #637086;
+  font-size: 13px;
+}
+
+.userList li a {
+  color: #3046c9;
+  font-weight: 700;
+}
+
+@media (max-width: 980px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

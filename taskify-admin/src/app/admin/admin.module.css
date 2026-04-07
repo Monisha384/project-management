@@ -1,0 +1,504 @@
+.dashboard {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  background: radial-gradient(circle at top right, #eef4ff 0%, #f6f8fc 45%, #f4f6fb 100%);
+  color: #1f2937;
+}
+
+.sidebar {
+  background: linear-gradient(180deg, #0f172a 0%, #18253f 100%);
+  color: #e6ebf6;
+  padding: 28px 20px;
+  border-right: 1px solid rgba(167, 180, 209, 0.18);
+}
+
+.sidebar h1 {
+  font-size: 24px;
+  margin-bottom: 28px;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar a {
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: #c4d0ec;
+  transition: all 0.2s ease;
+}
+
+.sidebar a:hover {
+  background: #1f2a44;
+  color: #fff;
+  transform: translateX(2px);
+}
+
+.contentArea {
+  padding: 28px;
+  max-width: 1360px;
+  width: 100%;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.topBar p {
+  color: #637086;
+}
+
+.topBar h2 {
+  margin-top: 4px;
+}
+
+.topBar a {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.topActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.topActions button {
+  border: 1px solid #dbe2f1;
+  background: #fff;
+  color: #1f2937;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.metricGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.metricGrid article {
+  border-radius: 14px;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #e6ecf7;
+  box-shadow: 0 12px 28px rgba(32, 55, 119, 0.06);
+}
+
+.metricGrid h3 {
+  color: #637086;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.metricGrid p {
+  font-size: 28px;
+  font-weight: 800;
+  color: #1c2639;
+}
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.statusMessage {
+  margin-bottom: 16px;
+  background: #e8efff;
+  color: #273b89;
+  border: 1px solid #c8d6ff;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-weight: 600;
+}
+
+.panel {
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid #e6ecf7;
+  box-shadow: 0 12px 28px rgba(32, 55, 119, 0.06);
+  padding: 18px;
+}
+
+.panelHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.panelHeading button,
+.form button {
+  border: none;
+  border-radius: 8px;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 9px 13px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.panelHeading button:hover,
+.form button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 18px color-mix(in srgb, var(--primary-color) 32%, transparent);
+}
+
+.panel table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+.panel th,
+.panel td {
+  text-align: left;
+  padding: 10px 8px;
+  border-bottom: 1px solid #edf1fa;
+  font-size: 14px;
+}
+
+.panel tbody tr:hover {
+  background: #f8fbff;
+}
+
+.panel th {
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
+.form {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form input,
+.form textarea,
+.form select {
+  width: 100%;
+  border: 1px solid #d9dfeb;
+  border-radius: 8px;
+  padding: 10px;
+  outline: none;
+  background: #fcfdff;
+}
+
+.form input:focus,
+.form textarea:focus,
+.form select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary-color) 16%, transparent);
+}
+
+.employeeList {
+  margin-top: 14px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.createdList {
+  margin-top: 12px;
+  margin-left: 18px;
+  color: #1f2d4b;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.projectGrid {
+  margin-top: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.projectItem {
+  border: 1px solid #e8edf8;
+  border-radius: 10px;
+  padding: 10px;
+  background: #fbfdff;
+}
+
+.projectHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.badge {
+  border-radius: 999px;
+  font-size: 12px;
+  padding: 4px 8px;
+  font-weight: 700;
+}
+
+.reportBadge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 4px 9px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.planned {
+  background: #fff3d3;
+  color: #8a6000;
+}
+
+.inprogress {
+  background: #dff0ff;
+  color: #125ab6;
+}
+
+.completed {
+  background: #dcf9e8;
+  color: #147347;
+}
+
+.progressTrack {
+  height: 8px;
+  margin-top: 8px;
+  background: #edf1fa;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-color) 0%, #22c55e 100%);
+}
+
+.progressText {
+  margin-top: 6px;
+  color: #576582;
+  font-size: 13px;
+}
+
+.analysisGrid {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(120px, 1fr));
+  gap: 10px;
+}
+
+.analysisGrid div {
+  border: 1px solid #e8edf8;
+  border-radius: 10px;
+  padding: 10px;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
+}
+
+.analysisGrid p {
+  color: #637086;
+  font-size: 13px;
+}
+
+.analysisGrid strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 22px;
+}
+
+.employeeList li {
+  border: 1px solid #e8edf8;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.employeeList small {
+  color: #637086;
+}
+
+.horizontalLayout {
+  grid-template-columns: 1fr;
+}
+
+.horizontalLayout .sidebar {
+  padding-bottom: 16px;
+}
+
+.horizontalLayout .sidebar nav {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.darkMode {
+  background: linear-gradient(180deg, #0b1220 0%, #0d1629 100%);
+  color: #e5e7eb;
+}
+
+.darkMode .contentArea,
+.darkMode .panel,
+.darkMode .metricGrid article,
+.darkMode .topActions button {
+  background: #111a2e;
+  color: #e5e7eb;
+}
+
+.darkMode .panel,
+.darkMode .metricGrid article {
+  border-color: #26344f;
+  box-shadow: 0 14px 28px rgba(1, 8, 20, 0.34);
+}
+
+.darkMode .statusMessage {
+  background: #1d2d58;
+  border-color: #2a4382;
+  color: #d9e4ff;
+}
+
+.darkMode .panel th,
+.darkMode .panel td,
+.darkMode .projectItem,
+.darkMode .analysisGrid div,
+.darkMode .employeeList li {
+  border-color: #25314b;
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.5);
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  z-index: 20;
+}
+
+.modal {
+  width: min(460px, 100%);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modalHeader h3 {
+  font-size: 32px;
+}
+
+.modalHeader button {
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modalBlock {
+  margin-top: 18px;
+}
+
+.modalBlock p {
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.choiceRow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.choiceRow button {
+  border: 1px solid #d3dbea;
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.choiceActive {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--primary-color) 18%, transparent);
+}
+
+.colorRow {
+  display: flex;
+  gap: 10px;
+}
+
+.colorDot {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.colorActive {
+  border-color: #111827;
+}
+
+.closeButton {
+  margin-top: 20px;
+  width: 100%;
+  border: 1px solid #d3dbea;
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .metricGrid {
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .contentArea {
+    padding: 16px;
+  }
+
+  .mainGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .topBar {
+    gap: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .analysisGrid {
+    grid-template-columns: 1fr;
+  }
+}
